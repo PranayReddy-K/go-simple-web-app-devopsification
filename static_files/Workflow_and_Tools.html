@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevOps Workflow and Tools</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header,
+      footer {
+        background: linear-gradient(135deg, #333, #444);
+        color: white;
+        text-align: center;
+        padding: 2em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+      header p {
+        margin: 0;
+        font-size: 1.2em;
+        color: #ddd;
+      }
+      main {
+        max-width: 900px;
+        margin: 2em auto;
+        padding: 2em;
+        background-color: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      h2 {
+        color: #333;
+        border-bottom: 2px solid #0044cc;
+        padding-bottom: 0.3em;
+        margin-top: 0;
+      }
+      p {
+        line-height: 1.8;
+        margin-bottom: 1em;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      .tools {
+        margin-top: 1em;
+      }
+      .tools img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      }
+      .tools ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .tools li {
+        margin-bottom: 1em;
+        padding-left: 20px;
+        position: relative;
+      }
+      .tools li:before {
+        content: "\2022";
+        color: #0044cc;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        font-size: 1.5em;
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DevOps Workflow and Tools</h1>
+      <p>Visualizing the CI/CD Process and Tools Used</p>
+    </header>
+    <main>
+      <h2>Workflow and Tools</h2>
+      <p>
+        Below is an overview of the image illustrating the CI/CD workflow for
+        deploying a static site. The following tools are used to facilitate this
+        process, each serving a specific role in the pipeline.
+      </p>
+
+      <section class="tools">
+        <h2>Image of CI/CD Workflow</h2>
+        <img src="/static_files/workflow_Image.png" alt="CI/CD Workflow" />
+
+        <h2>Tools Used</h2>
+        <ul>
+          <li>
+            <strong>CI/CD Tools:</strong>
+            <p>
+              <strong>GitHub Actions:</strong> Automates the build, test, and
+              deploy processes. It integrates seamlessly with GitHub
+              repositories and allows for complex workflows.
+              <br />
+              <strong>Jenkins:</strong> An open-source automation server used
+              for continuous integration and continuous delivery. Highly
+              customizable with plugins.
+            </p>
+          </li>
+          <li>
+            <strong>Container Registry:</strong>
+            <p>
+              <strong>Docker Hub:</strong> A popular public Docker registry
+              where Docker images can be stored and shared. It provides a
+              central repository for images.
+              <br />
+              <strong>Amazon ECR:</strong> A managed Docker container registry
+              service that allows you to store, manage, and deploy Docker
+              container images securely and at scale.
+            </p>
+          </li>
+          <li>
+            <strong>Continuous Deployment (CD) Methods:</strong>
+            <p>
+              <strong>Argo CD:</strong> A declarative, GitOps continuous
+              delivery tool for Kubernetes that automates the deployment
+              process.
+              <br />
+              <strong>Traditional Methods:</strong> Shell scripts or Ansible
+              playbooks can be used for automating deployment tasks outside of
+              the GitOps approach.
+            </p>
+          </li>
+
+          <li>
+            <strong>Cluster Management:</strong>
+            <p>
+              <strong>Amazon EKS:</strong> A managed Kubernetes service that
+              simplifies the deployment, management, and scaling of
+              containerized applications.
+              <br />
+              <strong>Google Kubernetes Engine (GKE):</strong> A managed
+              Kubernetes service from Google Cloud that provides a powerful
+              environment for containerized applications.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 K Pranay Reddy</p>
+    </footer>
+  </body>
+</html>

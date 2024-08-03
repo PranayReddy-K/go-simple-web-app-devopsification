@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project Info - Deploying Static Website</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <style>
+      body {
+        font-family: "Roboto", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+        color: #333;
+      }
+      header,
+      footer {
+        background: linear-gradient(135deg, #333, #444);
+        color: white;
+        text-align: center;
+        padding: 2em 0;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5em;
+      }
+      header p {
+        margin: 0;
+        font-size: 1.2em;
+        color: #ddd;
+      }
+      main {
+        max-width: 800px;
+        margin: 2em auto;
+        padding: 2em;
+        background-color: white;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+      }
+      h2,
+      h3 {
+        color: #333;
+        border-bottom: 2px solid #0044cc;
+        padding-bottom: 0.3em;
+        margin-top: 0;
+      }
+      p,
+      li {
+        line-height: 1.8;
+        margin-bottom: 1em;
+      }
+      ul {
+        list-style-type: disc;
+        padding-left: 20px;
+      }
+      .steps {
+        margin-top: 1em;
+      }
+      .steps ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+      .steps li {
+        margin-bottom: 1.5em;
+        padding-left: 20px;
+        position: relative;
+      }
+      .steps li:before {
+        content: "\2022";
+        color: #0044cc;
+        font-weight: bold;
+        display: inline-block;
+        width: 1em;
+        margin-left: -1em;
+        font-size: 1.5em;
+      }
+      .steps p {
+        margin: 0.5em 0 0;
+      }
+      footer {
+        background: linear-gradient(135deg, #333, #444);
+        color: white;
+        text-align: center;
+        padding: 1.5em 0;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+      }
+      footer p {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>DevOps Project</h1>
+      <p>Deploying a Static Website on a Cluster through CI/CD Process</p>
+    </header>
+    <main>
+      <h2>Project Description</h2>
+      <p>
+        This project focuses on deploying a static website onto a Kubernetes
+        cluster while implementing a complete CI/CD pipeline. Utilizing tools
+        like GitHub Actions for continuous integration and Argo CD for
+        continuous deployment, we aim to automate and streamline the deployment
+        process. By containerizing the application and using Helm charts for
+        Kubernetes manifests, we ensure scalability, manageability, and
+        efficiency.
+      </p>
+
+      <section class="steps">
+        <h3>Steps Included</h3>
+        <ul>
+          <li>
+            <strong>Write a Dockerfile:</strong>
+            <p>
+              The first step involves creating a Dockerfile to containerize the
+              static website. This ensures that the website runs consistently
+              across different environments by packaging all the necessary
+              dependencies and configurations. A well-structured Dockerfile is
+              crucial for maintaining application portability and ease of
+              deployment.
+            </p>
+          </li>
+          <li>
+            <strong>Write the Helm Manifest:</strong>
+            <p>
+              Next, we develop Helm charts to manage Kubernetes manifests. By
+              utilizing Helm templates, we create reusable and scalable
+              configurations for deployments, services, and ingress. This
+              approach allows us to easily manage and update the Kubernetes
+              resources, promoting consistency and reducing manual errors.
+            </p>
+          </li>
+          <li>
+            <strong>Create an EKS Cluster:</strong>
+            <p>
+              We then set up an Amazon Elastic Kubernetes Service (EKS) cluster
+              to host the static website. EKS provides a managed Kubernetes
+              environment, simplifying the deployment, management, and scaling
+              of containerized applications. The cluster ensures high
+              availability and reliability for the website.
+            </p>
+          </li>
+          <li>
+            <strong>Install Argo CD:</strong>
+            <p>
+              Argo CD is installed and configured to manage continuous
+              deployment. By creating an application within Argo CD, we can
+              automate the deployment process, ensuring that any changes pushed
+              to the repository are automatically deployed to the EKS cluster.
+              This tool helps maintain the desired state of applications,
+              promoting efficient DevOps practices.
+            </p>
+          </li>
+          <li>
+            <strong>Write a CI/CD Pipeline:</strong>
+            <p>
+              The CI/CD pipeline is set up using GitHub Actions. This pipeline
+              includes steps for building, testing, and performing quality
+              checks on the static website. Upon successful completion, the
+              pipeline pushes the Docker image to a repository and updates the
+              Helm values. This automation enhances the development workflow,
+              allowing for rapid and reliable releases.
+            </p>
+          </li>
+          <li>
+            <strong>Argo CD Deployment:</strong>
+            <p>
+              Finally, Argo CD detects the changes in the repository and
+              automatically deploys the updated static website to the EKS
+              cluster. This continuous deployment mechanism ensures that the
+              website is always up-to-date with the latest changes, reducing
+              downtime and manual intervention.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; 2024 K Pranay Reddy</p>
+    </footer>
+  </body>
+</html>
