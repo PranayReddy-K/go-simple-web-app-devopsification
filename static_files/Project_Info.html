@@ -16,22 +16,30 @@
         background-color: #f4f4f9;
         color: #333;
       }
-      header,
-      footer {
+      header {
         background: linear-gradient(135deg, #333, #444);
         color: white;
         text-align: center;
-        padding: 2em 0;
+        padding: 1em;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
       }
       header h1 {
         margin: 0;
-        font-size: 2.5em;
+        font-size: 2em;
       }
       header p {
         margin: 0;
         font-size: 1.2em;
         color: #ddd;
+      }
+      header a {
+        color: white;
+        text-decoration: none;
+        margin: 0 1em;
+        font-weight: bold;
+      }
+      header a:hover {
+        text-decoration: underline;
       }
       main {
         max-width: 800px;
@@ -87,6 +95,9 @@
         text-align: center;
         padding: 1.5em 0;
         box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+        position: fixed;
+        bottom: 0;
+        width: 100%;
       }
       footer p {
         margin: 0;
@@ -97,6 +108,9 @@
     <header>
       <h1>DevOps Project</h1>
       <p>Deploying a Static Website on a Cluster through CI/CD Process</p>
+      <a href="/project-info">Project Info</a>
+      <a href="/workflow-tools">Workflow & Tools</a>
+      <a href="/issues">Issues</a>
     </header>
     <main>
       <h2>Project Description</h2>
