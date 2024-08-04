@@ -1,0 +1,29 @@
+#ci/cd with the help of github actions
+
+name: CI/CD
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: set up go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.22.5
+
+      - name: Build
+        run: go build -o go-static-app
+
+      - name: test
+        run: go test ./...
